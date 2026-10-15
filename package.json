@@ -2,19 +2,32 @@
   "name": "learn-prisma",
   "version": "1.0.0",
   "description": "An exhaustive, production-grade Prisma ORM schema modeling, migrations & query architecture masterclass.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
+    "start": "tsx src/index.ts",
+    "seed": "tsx src/seed.ts",
+    "dev": "tsx watch src/index.ts",
     "test": "node --test tests/prisma.test.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "prisma": "^6.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
   },
   "keywords": [
     "prisma",
     "orm",
     "database",
+    "sqlite",
     "postgresql",
     "mysql",
     "typescript"
   ],
-  "author": "Manthan Ank",
+  "author": "The Learning Hub",
   "license": "MIT"
 }
